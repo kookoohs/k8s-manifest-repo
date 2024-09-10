@@ -9,6 +9,8 @@ patches:
 - path: frontend-deployment-patch.yaml
 - path: frontend-service-patch.yaml
 images:
+- name: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/
+  newName: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/
 - name: esjwoo/mini-back
   newName: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/mid2-backend
   newTag: abcdefg
