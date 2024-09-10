@@ -2,9 +2,12 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../../base
-patchesStrategicMerge:
-- backend-patch.yaml
-- frontend-patch.yaml
+namespace: myapp
+patches:
+- path: backend-deployment-patch.yaml
+- path: backend-service-patch.yaml
+- path: frontend-deployment-patch.yaml
+- path: frontend-service-patch.yaml
 images:
 - name: esjwoo/mini-back
   newName: 727646470302.dkr.ecr.ap-southeast-1.amazonaws.com/mid2-backend
